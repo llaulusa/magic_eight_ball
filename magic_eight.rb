@@ -20,11 +20,12 @@
 
 def main_menu
 	puts "welcome to the magic 8 ball."
-	puts "do you want to play? (y/n)"
+	puts "To begin type PLAY; if you would like to exit type QUIT."
 	
-	answer = gets.strip
+	
+	answer = gets.strip.downcase
 
-	if answer == "y" 
+	if answer == "play"
 		eight_ball
 	else
 		exit
@@ -43,7 +44,7 @@ def eight_ball
 
 	puts "\n Do you want to play again?(y/n)"
 
-	answer = gets.strip
+	answer = gets.strip.downcase
 
 		if answer == "y" 
 			eight_ball
@@ -54,7 +55,7 @@ end
 
 def exit
 	abort("Goodbye")
-end
+end 
 
 main_menu
 
